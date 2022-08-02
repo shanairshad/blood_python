@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% block title %} Blood Donation {% endblock %}
+{% block css %}
+{% endblock %}
+{% block body %}
+<form class="login_form container p-4 mt-5" style="color:#000;
+   background-color:#d9e6e6;" method="POST" >{% csrf_token %}
+    <h3><i style="font-weight: bold;    ">Patient Login</i></h3>
+    <div class="container mt-5">
+        <div class="mb-3">
+            <label for="username" class="form-label"><i style="font-weight: bold;">Username</i></label>
+            <input type="text" class="form-control" id="username" name="username" placeholder="Enter Username">
+        </div>
+        <div class="mb-3">
+            <label for="password" class="form-label"><i style="font-weight: bold;">Password</i></label>
+            <input type="password" class="form-control" id="password" name="password" placeholder="Enter Password">
+        </div>
+        <br>
+        <a type="submit" class="btn btn-success" href="{% url 'all_donors' %}">Login</a>
+    </div>
+</form>
+<section class="p-5">
+    <div  class="container-fluid text-center ">
+    <p >Do not have an account?<a href="{% url 'register' %}">Register now</a> </p>
+    </div>
+</section>
+{% endblock %}
+{% block js %}
+<script>
+    {% if alert %}
+    alert("Inavalid Credentials");
+    document.location = "/login"
+    {% endif %}
+</script>
+{% endblock %}
+

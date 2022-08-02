@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %} Blood Donation {% endblock %}
+{% block css %}
+{% endblock %}
+{% block body %}
+<body>
+<div class="alert alert-success" role="alert">
+  <h4 class="alert-heading">Thank You!</h4>
+ <p>We appreciate your donation! Your contribution will help us change lives – literally! Someone who would have lost their life was spared because you gave us your blood. Someone’s quality of life was improved because you gave us your blood.<hr>
+    We were able to help many because you gave us your blood. That’s pretty remarkable, and so are you. Thank you!</p>
+</div>
+
+<div class="row p-4">
+    <a type="submit" class="btn btn-primary" href="{% url 'index' %}">Home</a>
+</div>
+
+  <footer class="bg-light text-center text-lg-start w-100" style="position:fixed;bottom:0;">
+  <!-- Copyright -->
+  <div class="text-center p-1" style="background-color: rgba(0, 0, 0, 0.2);">
+    © 2022Copyright:
+    <a class="text-dark" href="#">Blood Bank and Donation Kerala</a>
+  </div>
+  <!-- Copyright -->
+</footer>
+</body>
+{% endblock %}

@@ -1,0 +1,132 @@
+{% extends 'base.html' %}
+{% block title %} Blood Donation {% endblock %}
+{% block css %}
+{% endblock %}
+{% block body %}
+<div class="container-fluid">
+
+    <form  class="register-form  container-fluid box mt-5 mb-5 p-5"  method="POST"> {% csrf_token %}
+        <h3><i style="font-weight: bold;    ">Request For Blood</i></h3>
+<div class="row mt-4">
+    <div class="form-group col-md-12">
+        <label><i style="font-weight: bold;">Full Name</i></label>
+        <input type="text" class="form-control" name="name" id="name" placeholder="Enter Name" required>
+    </div>
+</div>
+
+<div class="row mt-1">
+    <div class="form-group col-md-6">
+        <label><i style="font-weight: bold;">Email ID</i></label>
+        <input type="email" class="form-control" name="email" id="email" placeholder="Enter Email ID" required>
+    </div>
+    <div class="form-group col-md-6">
+        <label><i style="font-weight: bold;">Contact Number</i></label>
+        <input type="tel" class="form-control" name="phone" id="phone" placeholder="Enter Contact Number" required>
+    </div>
+</div>
+
+<div class="row mt-1">
+     <div class="form-group col-md-6">
+    <label><i style="font-weight: bold;">District</i></label>
+  <select class="form-control" name="select1" id="select1" required>
+    <option value="1">Trivandrum</option>
+    <option value="2">Malappuram</option>
+    <option value="3">Palakkad</option>
+    <option value="4">Kozhikode</option>
+      <option value="5">Wayanad</option>
+    <option value="6">Ernankulam</option>
+    <option value="7">Thrissur</option>
+    <option value="8">Kannur</option>
+       <option value="9">Alappuzha</option>
+
+  </select>
+</div>
+     <div class="form-group col-md-6">
+    <label><i style="font-weight: bold;">Center</i></label>
+  <select class="form-control" name="select2" id="select2" required>
+    <option value="1">Neyyatinkara</option>
+    <option value="1">Kovalam</option>
+    <option value="1">Sreekaryam</option>
+    <option value="2">Tirur</option>
+      <option value="2">Kondotty</option>
+    <option value="2">Perintalmanna</option>
+    <option value="3">Pattambi</option>
+    <option value="3">Chalissery</option>
+       <option value="3">Mannarkad</option>
+      <option value="4">Mukkam</option>
+    <option value="4">Vadakara</option>
+    <option value="4">Palazhi</option>
+    <option value="5">Kalapetta</option>
+      <option value="5">Mananthavady</option>
+    <option value="5">Sulthan Bathery</option>
+    <option value="6">Aluva</option>
+    <option value="6">Kakkanad</option>
+       <option value="6">Chottanikkara</option>
+      <option value="7">Guruvayur</option>
+    <option value="7">Chalakkudy</option>
+    <option value="7">Kodungallur</option>
+    <option value="8">Payyanur</option>
+      <option value="8">Periyaram</option>
+    <option value="8">Thalassery</option>
+    <option value="9">Kuttanad</option>
+    <option value="9">Cherthala</option>
+       <option value="9">Punnapra</option>
+</select>
+</div>
+<!--    <div class="form-group col-md-6">-->
+<!--        <label><i style="font-weight: bold;">District</i></label>-->
+<!--&lt;!&ndash;        <select  class="form-control" name="state" id="district" required></select>&ndash;&gt;-->
+<!--          <select id="inputDistrict" class="form-control" required>-->
+<!--          <option> Please select District</option>-->
+<!--          </select>-->
+<!--    </div>-->
+<!--    <div class="form-group col-md-6">-->
+<!--        <label><i style="font-weight: bold;">Center</i></label>-->
+<!--         <select id="inputCenter" class="form-control" required>-->
+<!--          <option>Please select Center</option>-->
+<!--          </select>-->
+<!--    </div>-->
+</div>
+
+<div class="row mt-1">
+    <div class="form-group col-md-12">
+        <label><i style="font-weight: bold;">Address</i></label>
+        <textarea class="form-control" id="address" name="address" rows="3" placeholder="Enter Address" required></textarea>
+    </div>
+</div>
+
+<div class="row mt-1">
+    <div class="form-group col-md-6">
+        <label><i style="font-weight: bold;">Blood Group</i></label>
+        <select class="form-control" name="blood_group" required>
+              <option>Please select Blood Group</option>
+            <option>A+</option>
+            <option>A-</option>
+            <option>B+</option>
+            <option>B-</option>
+            <option>O+</option>
+            <option>O-</option>
+            <option>AB+</option>
+            <option>AB-</option>
+            </select>
+    </div>
+        <div class="form-group col-md-6">
+            <label><i style="font-weight: bold;">Date Of Birth</i></label>
+            <input type="date" class="form-control" id="date" name="date" required>
+        </div>
+</div>
+<div class="row mt-1 p-4">
+<a type="submit" class="btn btn-success" href="{% url 'index' %}">Submit</a>
+</div>
+
+
+</form>
+<section class="p-5">
+<div>
+
+</div>
+
+</section>
+
+</div>
+{% endblock %}
